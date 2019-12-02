@@ -3,7 +3,7 @@ import math
 FILE_PATH = "C:/Users/Alex Inskeep/PycharmProjects/AdventOfCode/inputFiles/day_one_input.txt"
 
 ## PART1 ##
-def calcFuleRequirement(x):
+def calcFuelRequirement(x):
     return math.floor(x/3) - 2
 
 total = 0
@@ -11,7 +11,7 @@ total = 0
 with open(FILE_PATH) as inFile:
     for line in inFile:
         x = int(line.strip())
-        total += calcFuleRequirement(x)
+        total += calcFuelRequirement(x)
 
 print(f"PART ONE ANSWER: {total}")
 
@@ -19,18 +19,18 @@ print(f"PART ONE ANSWER: {total}")
 
 total = 0
 
-def calcFuleRequirement(x):
+def calcFuelRequirement(x):
     ans = math.floor(x/3) - 2
 
     if ans <= 0:
         return 0
     else:
-        return ans + calcFuleRequirement(ans)
+        return ans + calcFuelRequirement(ans)
 
 
 with open(FILE_PATH) as inFile:
     for line in inFile:
         x = int(line.strip())
-        total += calcFuleRequirement(x)
+        total += calcFuelRequirement(x)
 
 print(f"PART TWO ANSWER: {total}")
