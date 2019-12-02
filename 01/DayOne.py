@@ -1,6 +1,6 @@
 import math
 
-FILE_PATH = "C:/Users/Alex Inskeep/PycharmProjects/AdventOfCode/inputFiles/day_one_input.txt"
+FILE_PATH = "C:/Users/Alex Inskeep/Documents/GitHub/AdventOfCode2019/01/input.txt"
 
 ## PART1 ##
 def calcFuelRequirement(x):
