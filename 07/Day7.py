@@ -1,6 +1,8 @@
 import subprocess
+from subprocess import PIPE
 
+p = subprocess.Popen('./intCodeComputer', stdin=PIPE, stdout=PIPE)
 
-print("sup mfs")
+p.communicate(intput='5\n')
 
-print(subprocess.check_output(["echo", "Hello World!"]))
+print("test")
