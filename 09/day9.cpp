@@ -5,11 +5,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
 #include <sstream>
 using namespace std;
 
-const string filePath = "/home/ainskeep/github/AdventOfCode2019/09/input.txt";
+const string filePath = "input.txt";
 
 long long int getParam(long long int *array, int paramMode, int paramNumber, int opPosition, int relativeBase){
     int param;
@@ -103,7 +102,7 @@ long long int runProgram (){
                 cin >> inputInt;
                 cout << "You entered: " << inputInt << endl;
 
-                param1 = array[getParam(array, paramMode1, 1, opPosition, relativeBase)];
+                param1 = getParam(array, paramMode1, 1, opPosition, relativeBase);
 
                 array[param1] = inputInt;
 
@@ -165,7 +164,7 @@ long long int runProgram (){
                 opPosition += 4;
                 break;
             case 9:
-                param1 = getParam(array, paramMode1, 1, opPosition, relativeBase);
+                param1 = array[getParam(array, paramMode1, 1, opPosition, relativeBase)];
                 relativeBase += param1;
 
                 opPosition += 2;
